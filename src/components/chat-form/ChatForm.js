@@ -5,6 +5,10 @@ import AttachmentIcon from '../controls/icons/attachment-icon/AttachmentIcon';
 
 import './ChatForm.scss';
 
+import faker from 'faker'
+
+const faker = require('faker');
+
 const isMessageEmpty = (textMessage) => {
     return adjustTextMessage(textMessage).length === 0;
 }
@@ -28,8 +32,8 @@ const ChatForm = ({ selectedConversation, onMessageSubmitted }) => {
                 <input 
                     type="text" 
                     placeholder="type a message" 
-                    value={textMessage}
-                    onChange={ (e) => { setTextMessage(e.target.value); } } />
+                    value={faker.textMessage}
+                    onChange={ (e) => { setTextMessage(faker.e.target.value); } } />
                 <FormButton disabled={ disableButton }>Send</FormButton>
             </>
         );
